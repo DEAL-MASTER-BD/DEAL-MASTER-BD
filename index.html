@@ -82,5 +82,50 @@ $('#themeBtn').addEventListener('click',toggleTheme);$('#themeBtn2').addEventLis
 $('#hamb').addEventListener('click',()=>{$('#sidebar').classList.add('open');$('#overlay').classList.add('show')});$('#overlay').addEventListener('click',()=>{$('#sidebar').classList.remove('open');$('#overlay').classList.remove('show')});
 const date=new Date();$('#today').textContent='📅 '+date.toLocaleDateString('bn-BD',{year:'numeric',month:'long',day:'numeric'});
 </script>
+
+<!-- Supabase Admin Login -->
+<div id="admin-login" style="display:none;position:fixed;inset:0;z-index:99999;background:#101827;color:white;align-items:center;justify-content:center;padding:20px">
+  <div style="background:#1b2940;padding:28px;border-radius:16px;width:100%;max-width:380px">
+    <h2>DEAL MASTER BD</h2>
+    <p>Admin Login</p>
+    <input id="admin-email" type="email" placeholder="Admin Email" style="width:100%;padding:12px;margin:8px 0">
+    <input id="admin-password" type="password" placeholder="Password" style="width:100%;padding:12px;margin:8px 0">
+    <button id="admin-login-btn" style="width:100%;padding:12px;margin-top:12px">Login</button>
+    <p id="login-message"></p>
+  </div>
+</div>
+
+<script type="module">
+import { createClient } from
+'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+
+const SUPABASE_URL = 'https://usbvlmtczabmfxaqlffv.supabase.co';
+const SUPABASE_KEY = sb_publishable_TjH6qItG5ctLesDFx-xbCA_1_5x1oHs
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+const loginBox = document.getElementById('admin-login');
+const message = document.getElementById('login-message');
+
+loginBox.style.display = 'flex';
+
+supabase.auth.onAuthStateChange((event, session) => {
+  loginBox.style.display = session ? 'none' : 'flex';
+});
+
+document.getElementById('admin-login-btn').onclick = async () => {
+  const email = document.getElementById('admin-email').value.trim();
+  const password = document.getElementById('admin-password').value;
+
+  message.textContent = 'Logging in...';
+
+  const { error } = await supabase.auth.signInWithPassword({
+    email,
+    password
+  });
+
+  message.textContent = error ? error.message : 'Login successful';
+};
+</script>
+
 </body>
 </html>
