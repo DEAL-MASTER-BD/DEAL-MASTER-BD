@@ -123,7 +123,20 @@ document.getElementById('admin-login-btn').onclick = async () => {
     password
   });
 
-  message.textContent = error ? error.message : 'Login successful';
+ if (error) {
+  message.textContent = error.message;
+  return;
+}
+
+message.textContent = 'Login successful. Checking database...';
+
+const { count, error: dbError } = await supabase
+  .from('products')
+  .select('id', { count: 'exact', head: true });
+
+alert(dbError
+  ? 'Database Error: ' + dbError.message
+  : 'Database Connected! Products: ' + count);
 };
 </script>
 
