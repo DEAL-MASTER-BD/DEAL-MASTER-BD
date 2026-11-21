@@ -6,139 +6,211 @@
 <meta name="theme-color" content="#101827">
 <title>DEAL MASTER BD | Admin Panel</title>
 <style>
-:root{--bg:#f3f6fb;--panel:#fff;--panel2:#f8fafc;--text:#172033;--muted:#718096;--line:#e5eaf1;--green:#16a36a;--green2:#0f8555;--green-soft:#e7f7ef;--nav:#101827;--shadow:0 8px 28px rgba(20,35,60,.07)}
-[data-theme="dark"]{--bg:#0b1220;--panel:#111c2e;--panel2:#172438;--text:#e8eef8;--muted:#9aa9bd;--line:#26354a;--green:#35c889;--green2:#20aa70;--green-soft:#123c30;--shadow:0 8px 28px rgba(0,0,0,.22)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:255px;background:var(--nav);color:#eaf1fa;padding:22px 16px;display:flex;flex-direction:column;z-index:5;transition:transform .25s}.brand{display:flex;align-items:center;gap:11px;padding:3px 8px 25px}.brand-mark{height:42px;width:42px;border-radius:13px;background:linear-gradient(145deg,#20bd7b,#087a50);display:grid;place-items:center;font-size:21px;box-shadow:0 7px 18px #0b7d5144}.brand b{font-size:14px;letter-spacing:.4px}.brand small{display:block;color:#91a2b8;font-size:10px;margin-top:3px}.nav-label{font-size:10px;color:#71839b;font-weight:800;letter-spacing:1.3px;padding:12px 10px 7px}.nav{display:grid;gap:5px}.nav button{width:100%;border:0;background:transparent;color:#aebbd0;padding:11px 12px;border-radius:10px;text-align:left;display:flex;align-items:center;gap:12px;font-size:13px}.nav button:hover,.nav button.active{background:#1d3148;color:#fff}.nav button.active{box-shadow:inset 3px 0 #36ce8b}.ico{width:19px;text-align:center;font-size:16px}.side-bottom{margin-top:auto;border-top:1px solid #26364b;padding:16px 8px 0;color:#8fa0b6;font-size:11px;line-height:1.6}.main{margin-left:255px;min-height:100vh}.topbar{height:72px;background:var(--panel);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;position:sticky;top:0;z-index:4}.top-left{display:flex;align-items:center;gap:12px}.topbar h2{font-size:16px;margin:0}.topbar p{font-size:11px;color:var(--muted);margin:3px 0 0}.top-actions{display:flex;align-items:center;gap:9px}.icon-btn,.lang-btn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:10px;padding:9px 11px}.lang-btn{font-size:12px;font-weight:700}.avatar{height:34px;width:34px;border-radius:50%;background:var(--green-soft);color:var(--green2);display:grid;place-items:center;font-weight:800;font-size:12px}.hamb{display:none}.content{max-width:1500px;margin:auto;padding:28px 32px 45px}.welcome{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:23px}.eyebrow{color:var(--green2);font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.welcome h1{font-size:25px;margin:7px 0 5px;letter-spacing:-.5px}.welcome p{color:var(--muted);font-size:13px;margin:0}.date-chip{border:1px solid var(--line);background:var(--panel);padding:10px 13px;border-radius:11px;color:var(--muted);font-size:12px;white-space:nowrap}.notice{background:var(--green-soft);border:1px solid color-mix(in srgb,var(--green) 25%,transparent);border-radius:12px;padding:13px 15px;display:flex;gap:10px;align-items:flex-start;margin-bottom:20px;font-size:12px;color:var(--text)}.notice strong{color:var(--green2)}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:20px}.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:var(--shadow)}.stat-top{display:flex;align-items:center;justify-content:space-between}.stat-icon{height:36px;width:36px;border-radius:11px;background:var(--green-soft);display:grid;place-items:center;font-size:17px}.stat-label{font-size:11px;color:var(--muted);margin-top:13px}.stat-value{font-size:24px;font-weight:800;margin-top:4px;letter-spacing:-.5px}.stat-foot{font-size:10px;color:var(--muted);margin-top:5px}.grid2{display:grid;grid-template-columns:1.45fr 1fr;gap:16px;margin-bottom:17px}.card-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px}.card-head h3{font-size:14px;margin:0}.sub{font-size:11px;color:var(--muted);margin-top:4px}.pill{font-size:10px;font-weight:700;padding:5px 8px;border-radius:20px;background:var(--green-soft);color:var(--green2)}.chart{height:185px;display:flex;align-items:end;gap:12px;padding:14px 5px 0;border-bottom:1px solid var(--line);background:repeating-linear-gradient(to bottom,transparent 0,transparent 44px,var(--line) 45px)}.bar-wrap{height:100%;flex:1;display:flex;align-items:end;justify-content:center;position:relative}.bar{width:min(26px,70%);border-radius:7px 7px 2px 2px;background:linear-gradient(180deg,#39c98b,#14865a);min-height:4px}.bar-label{position:absolute;bottom:-21px;font-size:9px;color:var(--muted)}.chart-legend{font-size:10px;color:var(--muted);margin-top:28px}.platform-list{display:grid;gap:11px}.platform{display:flex;align-items:center;justify-content:space-between;padding:11px 12px;background:var(--panel2);border:1px solid var(--line);border-radius:11px}.platform-left{display:flex;align-items:center;gap:10px}.platform-icon{height:34px;width:34px;border-radius:10px;background:var(--panel);display:grid;place-items:center;font-size:16px}.platform b{display:block;font-size:12px}.platform small{font-size:10px;color:var(--muted)}.status{font-size:10px;font-weight:700;color:#b7791f;background:#fff6df;padding:5px 8px;border-radius:20px}.status.ok{color:#168354;background:var(--green-soft)}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:520px}th,td{text-align:left;padding:12px 9px;border-bottom:1px solid var(--line);font-size:11px}th{color:var(--muted);font-weight:700}td{color:var(--text)}.empty{text-align:center;color:var(--muted);padding:25px 8px;font-size:12px}.section-page{display:none}.section-page.active{display:block}.btn{border:0;background:var(--green);color:#fff;border-radius:9px;padding:10px 14px;font-size:11px;font-weight:800}.btn:hover{background:var(--green2)}.btn.secondary{background:var(--panel2);border:1px solid var(--line);color:var(--text)}.btn:disabled{opacity:.5;cursor:not-allowed}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field label{display:block;font-size:11px;font-weight:700;margin-bottom:7px}.field input,.field select{width:100%;padding:11px 12px;border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:9px;outline:none}.field input:focus,.field select:focus{border-color:var(--green)}.helper{font-size:10px;color:var(--muted);line-height:1.5;margin-top:7px}.action-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.toggle{appearance:none;width:35px;height:20px;background:#9aa6b5;border-radius:20px;position:relative;cursor:pointer;transition:.2s}.toggle:checked{background:var(--green)}.toggle:before{content:"";position:absolute;width:14px;height:14px;top:3px;left:3px;background:#fff;border-radius:50%;transition:.2s}.toggle:checked:before{left:18px}.setting-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);gap:15px}.setting-row b{font-size:12px}.setting-row small{display:block;color:var(--muted);font-size:10px;margin-top:4px}.toast{position:fixed;right:20px;bottom:20px;background:#142235;color:#fff;padding:12px 16px;border-radius:10px;font-size:12px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);transition:.2s;z-index:20;pointer-events:none}.toast.show{opacity:1;transform:translateY(0)}.footer{text-align:center;color:var(--muted);font-size:10px;margin-top:25px}.mobile-overlay{display:none}
-@media(max-width:1050px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2{grid-template-columns:1fr}}
-@media(max-width:720px){.sidebar{transform:translateX(-100%);width:270px}.sidebar.open{transform:translateX(0)}.mobile-overlay.show{display:block;position:fixed;inset:0;background:#0008;z-index:4}.main{margin-left:0}.topbar{height:64px;padding:0 15px}.hamb{display:inline-block}.content{padding:22px 15px 35px}.welcome{display:block}.date-chip{display:inline-block;margin-top:13px}.welcome h1{font-size:22px}.stats{gap:10px}.card{padding:14px}.stat-value{font-size:21px}.form-grid{grid-template-columns:1fr}.topbar p{display:none}}
+:root{--bg:#f3f6fb;--panel:#fff;--panel2:#f8fafc;--text:#172033;--muted:#718096;--line:#e5eaf1;--green:#16a36a;--green2:#0f8555;--soft:#e7f7ef;--nav:#101827;--shadow:0 8px 28px rgba(20,35,60,.07)}
+[data-theme=dark]{--bg:#0b1220;--panel:#111c2e;--panel2:#172438;--text:#e8eef8;--muted:#9aa9bd;--line:#26354a;--green:#35c889;--green2:#20aa70;--soft:#123c30;--shadow:0 8px 28px rgba(0,0,0,.22)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,Segoe UI,sans-serif}button,input{font:inherit}button{cursor:pointer}.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:245px;background:var(--nav);color:#eaf1fa;padding:22px 16px;display:flex;flex-direction:column;z-index:5}.brand{font-weight:800;padding:8px 10px 25px}.brand small{display:block;color:#91a2b8;font-size:11px;margin-top:4px}.nav{display:grid;gap:6px}.nav button{border:0;background:transparent;color:#b8c5d8;text-align:left;padding:12px;border-radius:10px}.nav button.active,.nav button:hover{background:#1d3148;color:white}.side-bottom{margin-top:auto;color:#91a2b8;font-size:11px}.main{margin-left:245px}.topbar{height:68px;background:var(--panel);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;z-index:3}.topbar h2{font-size:17px}.top-actions{display:flex;gap:8px;align-items:center}.top-actions button,.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:9px;padding:9px 13px}.content{max-width:1400px;margin:auto;padding:26px}.welcome{margin-bottom:20px}.eyebrow{font-size:11px;color:var(--green2);font-weight:800;letter-spacing:1px}.welcome h1{font-size:25px;margin:7px 0}.welcome p,.muted{color:var(--muted);font-size:13px}.notice{background:var(--soft);padding:14px;border-radius:11px;margin-bottom:18px;font-size:13px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px;box-shadow:var(--shadow);margin-bottom:16px}.stat-label{font-size:12px;color:var(--muted)}.stat-value{font-size:25px;font-weight:800;margin-top:8px}.section-page{display:none}.section-page.active{display:block}.card-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.card-head h3{margin:0;font-size:15px}.pill{font-size:10px;padding:5px 9px;border-radius:20px;background:var(--soft);color:var(--green2)}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field label{display:block;font-size:12px;font-weight:700;margin-bottom:6px}.field input{width:100%;padding:11px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:var(--text)}.btn.primary{background:var(--green);border-color:var(--green);color:white;font-weight:800}.btn:disabled{opacity:.5;cursor:wait}.action-row{display:flex;gap:9px;margin-top:15px;flex-wrap:wrap}.helper{font-size:11px;color:var(--muted);margin-top:9px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:650px}th,td{text-align:left;padding:11px 9px;border-bottom:1px solid var(--line);font-size:12px}th{color:var(--muted)}.empty{text-align:center;color:var(--muted);padding:22px}.toast{position:fixed;right:18px;bottom:18px;background:#142235;color:#fff;padding:12px 16px;border-radius:10px;z-index:30;display:none}.toast.show{display:block}.login{position:fixed;inset:0;z-index:99;background:#101827;display:flex;align-items:center;justify-content:center;padding:20px}.login-card{background:#1b2940;color:white;padding:28px;border-radius:16px;width:100%;max-width:380px}.login-card input{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #52627a}.login-card button{width:100%;padding:12px;margin-top:10px;background:#20bd7b;border:0;border-radius:8px;font-weight:800}.login-card p{font-size:12px;overflow-wrap:anywhere}.hidden{display:none!important}
+@media(max-width:850px){.sidebar{width:205px}.main{margin-left:205px}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.sidebar{position:static;width:auto;height:auto;padding:10px}.brand{padding:8px}.nav{grid-template-columns:repeat(3,1fr)}.nav button{font-size:11px;padding:9px}.side-bottom{display:none}.main{margin:0}.topbar{padding:0 14px}.content{padding:16px}.form-grid{grid-template-columns:1fr}.stats{gap:9px}.stat-value{font-size:21px}}
 </style>
 </head>
 <body>
-<div class="app" id="app">
-<aside class="sidebar" id="sidebar">
-  <div class="brand"><div class="brand-mark">🛍️</div><div><b>DEAL MASTER BD</b><small>Affiliate Business Center</small></div></div>
-  <div class="nav-label" data-bn="মূল মেনু" data-en="MAIN MENU">মূল মেনু</div>
-  <nav class="nav" id="nav">
-    <button class="active" data-page="dashboard"><span class="ico">▦</span><span data-bn="ড্যাশবোর্ড" data-en="Dashboard">ড্যাশবোর্ড</span></button>
-    <button data-page="products"><span class="ico">▣</span><span data-bn="পণ্য ও অফার" data-en="Products & Deals">পণ্য ও অফার</span></button>
-    <button data-page="links"><span class="ico">🔗</span><span data-bn="অ্যাফিলিয়েট লিংক" data-en="Affiliate Links">অ্যাফিলিয়েট লিংক</span></button>
-    <button data-page="posting"><span class="ico">➤</span><span data-bn="পোস্টিং নিয়ন্ত্রণ" data-en="Posting Control">পোস্টিং নিয়ন্ত্রণ</span></button>
-    <button data-page="earnings"><span class="ico">৳</span><span data-bn="আয় ও কমিশন" data-en="Earnings">আয় ও কমিশন</span></button>
-    <button data-page="analytics"><span class="ico">▥</span><span data-bn="অ্যানালিটিক্স" data-en="Analytics">অ্যানালিটিক্স</span></button>
-  </nav>
-  <div class="nav-label" data-bn="সিস্টেম" data-en="SYSTEM">সিস্টেম</div>
-  <nav class="nav">
-    <button data-page="schedule"><span class="ico">◷</span><span data-bn="পোস্ট শিডিউল" data-en="Scheduler">পোস্ট শিডিউল</span></button>
-    <button data-page="history"><span class="ico">↺</span><span data-bn="পোস্ট হিস্টোরি" data-en="Posting History">পোস্ট হিস্টোরি</span></button>
-    <button data-page="settings"><span class="ico">⚙</span><span data-bn="সেটিংস" data-en="Settings">সেটিংস</span></button>
-  </nav>
-  <div class="side-bottom">DEAL MASTER BD<br>Version 1.0 · Admin Workspace</div>
+<div class="app">
+<aside class="sidebar">
+ <div class="brand">🛍️ DEAL MASTER BD<small>Affiliate Business Center</small></div>
+ <nav class="nav" id="nav">
+  <button class="active" data-page="dashboard">▦ ড্যাশবোর্ড</button>
+  <button data-page="products">▣ পণ্য ও অফার</button>
+  <button data-page="links">🔗 অ্যাফিলিয়েট লিংক</button>
+  <button data-page="posting">➤ পোস্টিং নিয়ন্ত্রণ</button>
+  <button data-page="earnings">৳ আয় ও কমিশন</button>
+  <button data-page="settings">⚙ সেটিংস</button>
+ </nav>
+ <div class="side-bottom">Version 1.1 · Admin Workspace</div>
 </aside>
-<div class="mobile-overlay" id="overlay"></div>
 <main class="main">
-<header class="topbar">
-  <div class="top-left"><button class="icon-btn hamb" id="hamb">☰</button><div><h2 id="pageTitle">ড্যাশবোর্ড</h2><p data-bn="আপনার অ্যাফিলিয়েট ব্যবসার নিয়ন্ত্রণ কেন্দ্র" data-en="Your affiliate business control center">আপনার অ্যাফিলিয়েট ব্যবসার নিয়ন্ত্রণ কেন্দ্র</p></div></div>
-  <div class="top-actions"><button class="lang-btn" id="langBtn">EN</button><button class="icon-btn" id="themeBtn" title="Theme">☾</button><div class="avatar">AD</div></div>
-</header>
+<header class="topbar"><h2 id="pageTitle">ড্যাশবোর্ড</h2><div class="top-actions"><button id="themeBtn">☾ থিম</button><button id="logoutBtn">Logout</button></div></header>
 <div class="content">
 <section class="section-page active" id="page-dashboard">
-  <div class="welcome"><div><div class="eyebrow">WELCOME BACK · ADMIN</div><h1 data-bn="আপনার ব্যবসার সারসংক্ষেপ" data-en="Your Business Overview">আপনার ব্যবসার সারসংক্ষেপ</h1><p data-bn="DEAL MASTER BD-এর সব কার্যক্রম এক জায়গা থেকে পরিচালনা করুন।" data-en="Manage your DEAL MASTER BD operations from one place.">DEAL MASTER BD-এর সব কার্যক্রম এক জায়গা থেকে পরিচালনা করুন।</p></div><div class="date-chip" id="today">📅 আজ</div></div>
-  <div class="notice">ℹ️ <div><strong data-bn="সেটআপ মোড চালু আছে" data-en="Setup mode is active">সেটআপ মোড চালু আছে</strong><br><span data-bn="এটি এখন ডিজাইন ও ডেমো ড্যাশবোর্ড। Daraz, Telegram বা Facebook-এর লাইভ ডেটা এখনো সংযুক্ত নয়।" data-en="This is currently a design/demo dashboard. Live Daraz, Telegram and Facebook data are not connected yet.">এটি এখন ডিজাইন ও ডেমো ড্যাশবোর্ড। Daraz, Telegram বা Facebook-এর লাইভ ডেটা এখনো সংযুক্ত নয়।</span></div></div>
-  <div class="stats">
-    <div class="card"><div class="stat-top"><span class="stat-icon">৳</span><span class="pill">BDT</span></div><div class="stat-label" data-bn="মোট কমিশন" data-en="Total Commission">মোট কমিশন</div><div class="stat-value">৳0.00</div><div class="stat-foot" data-bn="Daraz রিপোর্ট সংযুক্ত হলে দেখাবে" data-en="Available after Daraz report connection">Daraz রিপোর্ট সংযুক্ত হলে দেখাবে</div></div>
-    <div class="card"><div class="stat-top"><span class="stat-icon">🛒</span><span class="pill">Orders</span></div><div class="stat-label" data-bn="মোট অর্ডার" data-en="Total Orders">মোট অর্ডার</div><div class="stat-value">0</div><div class="stat-foot" data-bn="রিপোর্ট থেকে আপডেট হবে" data-en="Updated from reports">রিপোর্ট থেকে আপডেট হবে</div></div>
-    <div class="card"><div class="stat-top"><span class="stat-icon">↗</span><span class="pill">Clicks</span></div><div class="stat-label" data-bn="মোট ক্লিক" data-en="Total Clicks">মোট ক্লিক</div><div class="stat-value">0</div><div class="stat-foot" data-bn="ট্র্যাকিং সুবিধা যুক্ত হলে দেখাবে" data-en="Shown when tracking is connected">ট্র্যাকিং সুবিধা যুক্ত হলে দেখাবে</div></div>
-    <div class="card"><div class="stat-top"><span class="stat-icon">📦</span><span class="pill">Deals</span></div><div class="stat-label" data-bn="সংরক্ষিত অফার" data-en="Saved Deals">সংরক্ষিত অফার</div><div class="stat-value">0</div><div class="stat-foot" data-bn="এখনো কোনো পণ্য যোগ করা হয়নি" data-en="No products added yet">এখনো কোনো পণ্য যোগ করা হয়নি</div></div>
-  </div>
-  <div class="grid2">
-    <div class="card"><div class="card-head"><div><h3 data-bn="কমিশন পারফরম্যান্স" data-en="Commission Performance">কমিশন পারফরম্যান্স</h3><div class="sub" data-bn="মাসভিত্তিক রিপোর্ট সংযুক্ত হলে এখানে দেখা যাবে" data-en="Monthly report will appear here when connected">মাসভিত্তিক রিপোর্ট সংযুক্ত হলে এখানে দেখা যাবে</div></div><span class="pill">Monthly</span></div><div class="chart"><div class="bar-wrap"><div class="bar" style="height:5%"></div><span class="bar-label">Jan</span></div><div class="bar-wrap"><div class="bar" style="height:5%"></div><span class="bar-label">Feb</span></div><div class="bar-wrap"><div class="bar" style="height:5%"></div><span class="bar-label">Mar</span></div><div class="bar-wrap"><div class="bar" style="height:5%"></div><span class="bar-label">Apr</span></div><div class="bar-wrap"><div class="bar" style="height:5%"></div><span class="bar-label">May</span></div><div class="bar-wrap"><div class="bar" style="height:5%"></div><span class="bar-label">Jun</span></div><div class="bar-wrap"><div class="bar" style="height:5%"></div><span class="bar-label">Jul</span></div></div><div class="chart-legend">● <span data-bn="প্রকৃত রিপোর্ট এলে চার্ট আপডেট হবে" data-en="Chart updates when real reports are connected">প্রকৃত রিপোর্ট এলে চার্ট আপডেট হবে</span></div></div>
-    <div class="card"><div class="card-head"><div><h3 data-bn="প্ল্যাটফর্ম স্ট্যাটাস" data-en="Platform Status">প্ল্যাটফর্ম স্ট্যাটাস</h3><div class="sub" data-bn="সংযোগের অবস্থা" data-en="Connection status">সংযোগের অবস্থা</div></div><span class="pill">3 Channels</span></div><div class="platform-list"><div class="platform"><div class="platform-left"><div class="platform-icon">✈️</div><div><b>Telegram</b><small>@deal_master_bd</small></div></div><span class="status">Setup Pending</span></div><div class="platform"><div class="platform-left"><div class="platform-icon">f</div><div><b>Facebook</b><small>DEAL Master BD</small></div></div><span class="status">Setup Pending</span></div><div class="platform"><div class="platform-left"><div class="platform-icon">🟢</div><div><b>WhatsApp</b><small>Channel</small></div></div><span class="status">Manual</span></div></div></div>
-  </div>
-  <div class="card"><div class="card-head"><div><h3 data-bn="সাম্প্রতিক কার্যক্রম" data-en="Recent Activity">সাম্প্রতিক কার্যক্রম</h3><div class="sub" data-bn="সিস্টেম চালু হলে এখানে পোস্ট ও অর্ডারের তথ্য আসবে" data-en="Posts and order events will appear here after setup">সিস্টেম চালু হলে এখানে পোস্ট ও অর্ডারের তথ্য আসবে</div></div><button class="btn secondary" data-go="history" data-bn="সব দেখুন" data-en="View All">সব দেখুন</button></div><div class="empty" data-bn="এখনো কোনো কার্যক্রম নেই" data-en="No activity yet">এখনো কোনো কার্যক্রম নেই</div></div>
+ <div class="welcome"><div class="eyebrow">WELCOME BACK · ADMIN</div><h1>আপনার ব্যবসার সারসংক্ষেপ</h1><p>DEAL MASTER BD-এর কার্যক্রম এক জায়গা থেকে পরিচালনা করুন।</p></div>
+ <div class="notice">ℹ️ পণ্য সংরক্ষণ এখন Supabase ডেটাবেজের সঙ্গে যুক্ত। Telegram/Facebook অটো-পোস্টিং এখনো আলাদাভাবে সংযুক্ত করতে হবে।</div>
+ <div class="stats">
+  <div class="card"><div class="stat-label">সংরক্ষিত পণ্য</div><div class="stat-value" id="dashProducts">0</div></div>
+  <div class="card"><div class="stat-label">মোট কমিশন</div><div class="stat-value">৳0.00</div></div>
+  <div class="card"><div class="stat-label">মোট অর্ডার</div><div class="stat-value">0</div></div>
+  <div class="card"><div class="stat-label">পোস্টিং চ্যানেল</div><div class="stat-value">3</div></div>
+ </div>
+ <div class="card"><h3>সাম্প্রতিক পণ্য</h3><p class="muted">পণ্য ও অফার মেনু থেকে নতুন পণ্য যোগ করুন।</p><button class="btn primary" data-go="products">পণ্য যোগ করুন</button></div>
 </section>
-<section class="section-page" id="page-products"><div class="welcome"><div><div class="eyebrow">PRODUCT CENTER</div><h1 data-bn="পণ্য ও অফার ব্যবস্থাপনা" data-en="Products & Deals">পণ্য ও অফার ব্যবস্থাপনা</h1><p data-bn="Daraz-এর পণ্য ও অফার সংরক্ষণের জায়গা।" data-en="Manage and save Daraz products and deals.">Daraz-এর পণ্য ও অফার সংরক্ষণের জায়গা।</p></div></div><div class="card"><div class="card-head"><h3 data-bn="নতুন পণ্য যোগ করুন" data-en="Add a Product">নতুন পণ্য যোগ করুন</h3><span class="pill">Manual Entry</span></div><div class="form-grid"><div class="field"><label data-bn="পণ্যের নাম" data-en="Product Name">পণ্যের নাম</label><input placeholder="যেমন: Redmi Note phone"></div><div class="field"><label data-bn="Daraz Product URL" data-en="Daraz Product URL">Daraz Product URL</label><input placeholder="https://www.daraz.com.bd/..."></div><div class="field"><label data-bn="বর্তমান দাম (৳)" data-en="Current Price (BDT)">বর্তমান দাম (৳)</label><input type="number" placeholder="0"></div><div class="field"><label data-bn="আগের দাম (৳)" data-en="Original Price (BDT)">আগের দাম (৳)</label><input type="number" placeholder="0"></div></div><div class="helper" data-bn="এই ফর্মটি আপাতত ডিজাইন নমুনা; Save করলে এখনো ডেটাবেজে সংরক্ষণ হবে না।" data-en="This form is a UI preview only; saving to a database is not enabled yet.">এই ফর্মটি আপাতত ডিজাইন নমুনা; Save করলে এখনো ডেটাবেজে সংরক্ষণ হবে না।</div><div class="action-row"><button class="btn" data-toast="Database যুক্ত হলে পণ্য সংরক্ষণ চালু হবে।" data-toast-en="Product saving will work after database setup.">পণ্য সংরক্ষণ</button></div></div></section>
-<section class="section-page" id="page-links"><div class="welcome"><div><div class="eyebrow">AFFILIATE TOOLS</div><h1 data-bn="অ্যাফিলিয়েট লিংক ম্যানেজার" data-en="Affiliate Link Manager">অ্যাফিলিয়েট লিংক ম্যানেজার</h1><p data-bn="Daraz লিংক ও কনভার্ট করা অ্যাফিলিয়েট লিংক পরিচালনা করুন।" data-en="Manage Daraz product URLs and converted affiliate links.">Daraz লিংক ও কনভার্ট করা অ্যাফিলিয়েট লিংক পরিচালনা করুন।</p></div></div><div class="card"><h3 data-bn="লিংক কনভার্ট ও সংরক্ষণ" data-en="Convert & Save Link">লিংক কনভার্ট ও সংরক্ষণ</h3><div class="field" style="margin-top:15px"><label>Daraz Product URL</label><input placeholder="Daraz product URL paste করুন"></div><div class="helper" data-bn="Affiliate Link Converter থেকে তৈরি লিংক এখানে যোগ করা যাবে। স্বয়ংক্রিয় কনভার্সন এখনো সংযুক্ত নয়।" data-en="Paste a link generated by the Affiliate Link Converter. Automatic conversion is not connected yet.">Affiliate Link Converter থেকে তৈরি লিংক এখানে যোগ করা যাবে। স্বয়ংক্রিয় কনভার্সন এখনো সংযুক্ত নয়।</div><div class="action-row"><button class="btn" data-toast="Affiliate link service যুক্ত হলে এই সুবিধা চালু হবে।" data-toast-en="This feature will be enabled after affiliate link integration.">লিংক যোগ করুন</button></div></div></section>
-<section class="section-page" id="page-posting"><div class="welcome"><div><div class="eyebrow">CHANNEL MANAGEMENT</div><h1 data-bn="পোস্টিং নিয়ন্ত্রণ" data-en="Posting Control">পোস্টিং নিয়ন্ত্রণ</h1><p data-bn="প্রতিটি প্ল্যাটফর্মের পোস্টিং আলাদাভাবে পরিচালনা করুন।" data-en="Manage posting for each platform separately.">প্রতিটি প্ল্যাটফর্মের পোস্টিং আলাদাভাবে পরিচালনা করুন।</p></div></div><div class="card"><div class="setting-row"><div><b>✈️ Telegram</b><small data-bn="Bot দিয়ে Telegram Channel-এ পোস্ট" data-en="Post to Telegram Channel using your bot">Bot দিয়ে Telegram Channel-এ পোস্ট</small></div><button class="btn secondary" data-toast="পরবর্তী ধাপে Telegram Bot নিরাপদভাবে সংযুক্ত করব।" data-toast-en="We will securely connect the Telegram bot in the next step.">Configure</button></div><div class="setting-row"><div><b>f Facebook</b><small data-bn="Meta অনুমোদিত Page posting API প্রয়োজন" data-en="Meta-approved Page posting API required">Meta অনুমোদিত Page posting API প্রয়োজন</small></div><button class="btn secondary" data-toast="Facebook API setup এখনো করা হয়নি।" data-toast-en="Facebook API setup is not done yet.">Configure</button></div><div class="setting-row"><div><b>🟢 WhatsApp Channel</b><small data-bn="আপাতত পোস্ট প্রস্তুত হবে, প্রকাশ ম্যানুয়ালি করতে হবে" data-en="Prepare posts here; publish manually for now">আপাতত পোস্ট প্রস্তুত হবে, প্রকাশ ম্যানুয়ালি করতে হবে</small></div><span class="status">Manual</span></div><div class="setting-row"><div><b data-bn="সব পোস্টিং বন্ধ করুন" data-en="Stop all posting">সব পোস্টিং বন্ধ করুন</b><small data-bn="ব্যাকএন্ড যুক্ত হলে জরুরি বন্ধের সুইচ কাজ করবে" data-en="Emergency stop works after backend integration">ব্যাকএন্ড যুক্ত হলে জরুরি বন্ধের সুইচ কাজ করবে</small></div><input type="checkbox" class="toggle" disabled></div></div></section>
-<section class="section-page" id="page-earnings"><div class="welcome"><div><div class="eyebrow">REVENUE CENTER</div><h1 data-bn="আয় ও কমিশন" data-en="Earnings & Commission">আয় ও কমিশন</h1><p data-bn="Daraz Affiliate রিপোর্ট থেকে প্রকৃত আয় দেখা যাবে।" data-en="Actual earnings will be shown from Daraz Affiliate reports.">Daraz Affiliate রিপোর্ট থেকে প্রকৃত আয় দেখা যাবে।</p></div></div><div class="stats"><div class="card"><div class="stat-label" data-bn="Pending কমিশন" data-en="Pending Commission">Pending কমিশন</div><div class="stat-value">৳0</div></div><div class="card"><div class="stat-label" data-bn="Approved কমিশন" data-en="Approved Commission">Approved কমিশন</div><div class="stat-value">৳0</div></div><div class="card"><div class="stat-label" data-bn="Paid কমিশন" data-en="Paid Commission">Paid কমিশন</div><div class="stat-value">৳0</div></div><div class="card"><div class="stat-label" data-bn="Returned অর্ডার" data-en="Returned Orders">Returned অর্ডার</div><div class="stat-value">0</div></div></div><div class="card"><div class="card-head"><h3 data-bn="কমিশন রিপোর্ট" data-en="Commission Report">কমিশন রিপোর্ট</h3><span class="status">Not Connected</span></div><div class="empty" data-bn="Daraz Affiliate রিপোর্ট ইমপোর্ট বা অনুমোদিত API সংযুক্ত হলে প্রকৃত অর্ডার ও কমিশন এখানে দেখা যাবে।" data-en="Real orders and commission will appear after importing a Daraz Affiliate report or connecting an approved API.">Daraz Affiliate রিপোর্ট ইমপোর্ট বা অনুমোদিত API সংযুক্ত হলে প্রকৃত অর্ডার ও কমিশন এখানে দেখা যাবে।</div></div></section>
-<section class="section-page" id="page-analytics"><div class="welcome"><div><div class="eyebrow">PERFORMANCE</div><h1 data-bn="অ্যানালিটিক্স" data-en="Analytics">অ্যানালিটিক্স</h1><p data-bn="ক্লিক, অর্ডার ও প্ল্যাটফর্মভিত্তিক পারফরম্যান্স।" data-en="Clicks, orders and platform performance.">ক্লিক, অর্ডার ও প্ল্যাটফর্মভিত্তিক পারফরম্যান্স।</p></div></div><div class="card"><div class="empty" data-bn="ট্র্যাকিং ও রিপোর্টিং সংযুক্ত হলে এখানে বিস্তারিত চার্ট দেখা যাবে।" data-en="Detailed charts will appear here after tracking and reporting are connected.">ট্র্যাকিং ও রিপোর্টিং সংযুক্ত হলে এখানে বিস্তারিত চার্ট দেখা যাবে।</div></div></section>
-<section class="section-page" id="page-schedule"><div class="welcome"><div><div class="eyebrow">AUTOMATION</div><h1 data-bn="পোস্ট শিডিউলার" data-en="Post Scheduler">পোস্ট শিডিউলার</h1><p data-bn="কোন সময়ে কোন চ্যানেলে পোস্ট হবে তা পরিকল্পনা করুন।" data-en="Plan when and where posts should be published.">কোন সময়ে কোন চ্যানেলে পোস্ট হবে তা পরিকল্পনা করুন।</p></div></div><div class="card"><div class="form-grid"><div class="field"><label data-bn="পোস্টের সময়" data-en="Post Time">পোস্টের সময়</label><input type="time"></div><div class="field"><label data-bn="প্ল্যাটফর্ম" data-en="Platform">প্ল্যাটফর্ম</label><select><option>Telegram</option><option>Facebook</option><option>WhatsApp (Manual)</option></select></div><div class="field"><label data-bn="দৈনিক পোস্ট সীমা" data-en="Daily Post Limit">দৈনিক পোস্ট সীমা</label><input type="number" value="5"></div><div class="field"><label data-bn="পোস্টিং সময় অঞ্চল" data-en="Timezone">পোস্টিং সময় অঞ্চল</label><input value="Asia/Dhaka" readonly></div></div><div class="helper" data-bn="Scheduler backend যুক্ত না হওয়া পর্যন্ত এই সেটিংস সংরক্ষিত হবে না।" data-en="These settings will not be saved until the scheduler backend is connected.">Scheduler backend যুক্ত না হওয়া পর্যন্ত এই সেটিংস সংরক্ষিত হবে না।</div><div class="action-row"><button class="btn" data-toast="Scheduler backend যুক্ত হলে শিডিউল সংরক্ষণ হবে।" data-toast-en="Schedules can be saved after scheduler backend setup.">শিডিউল সংরক্ষণ</button></div></div></section>
-<section class="section-page" id="page-history"><div class="welcome"><div><div class="eyebrow">ACTIVITY LOG</div><h1 data-bn="পোস্ট হিস্টোরি" data-en="Posting History">পোস্ট হিস্টোরি</h1><p data-bn="প্রকাশিত ও ব্যর্থ পোস্টের রেকর্ড।" data-en="Records of published and failed posts.">প্রকাশিত ও ব্যর্থ পোস্টের রেকর্ড।</p></div></div><div class="card"><div class="empty" data-bn="এখনো কোনো পোস্টের রেকর্ড নেই।" data-en="No posting records yet.">এখনো কোনো পোস্টের রেকর্ড নেই।</div></div></section>
-<section class="section-page" id="page-settings"><div class="welcome"><div><div class="eyebrow">PREFERENCES</div><h1 data-bn="সেটিংস" data-en="Settings">সেটিংস</h1><p data-bn="আপনার Admin Panel নিজের মতো সাজান।" data-en="Customize your admin panel preferences.">আপনার Admin Panel নিজের মতো সাজান।</p></div></div><div class="card"><div class="setting-row"><div><b data-bn="ডার্ক / লাইট মোড" data-en="Dark / Light Mode">ডার্ক / লাইট মোড</b><small data-bn="আপনার পছন্দের থিম বেছে নিন" data-en="Choose your preferred theme">আপনার পছন্দের থিম বেছে নিন</small></div><button class="btn secondary" id="themeBtn2" data-bn="থিম পরিবর্তন" data-en="Change Theme">থিম পরিবর্তন</button></div><div class="setting-row"><div><b data-bn="ভাষা" data-en="Language">ভাষা</b><small data-bn="বাংলা ও English-এর মধ্যে পরিবর্তন করুন" data-en="Switch between Bangla and English">বাংলা ও English-এর মধ্যে পরিবর্তন করুন</small></div><button class="btn secondary" id="langBtn2">বাংলা / EN</button></div><div class="setting-row"><div><b data-bn="নিরাপত্তা" data-en="Security">নিরাপত্তা</b><small data-bn="লাইভ ব্যবহারের আগে Admin Login ও Backend Security যোগ করতে হবে" data-en="Admin login and backend security must be added before live use">লাইভ ব্যবহারের আগে Admin Login ও Backend Security যোগ করতে হবে</small></div><span class="status">Not Set</span></div></div></section>
-<div class="footer">© 2026 DEAL MASTER BD · Secure Affiliate Management Workspace</div>
-</div></main></div><div class="toast" id="toast"></div>
-<script>
-const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
-let lang='bn';
-const titles={dashboard:['ড্যাশবোর্ড','Dashboard'],products:['পণ্য ও অফার','Products & Deals'],links:['অ্যাফিলিয়েট লিংক','Affiliate Links'],posting:['পোস্টিং নিয়ন্ত্রণ','Posting Control'],earnings:['আয় ও কমিশন','Earnings'],analytics:['অ্যানালিটিক্স','Analytics'],schedule:['পোস্ট শিডিউল','Scheduler'],history:['পোস্ট হিস্টোরি','Posting History'],settings:['সেটিংস','Settings']};
-function showPage(page){$$('.section-page').forEach(x=>x.classList.remove('active'));$('#page-'+page)?.classList.add('active');$$('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));$('#pageTitle').textContent=titles[page]?.[lang==='bn'?0:1]||'Dashboard';$('#sidebar').classList.remove('open');$('#overlay').classList.remove('show');window.scrollTo(0,0)}
-$$('#nav button').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
-$$('[data-go]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.go)));
-function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
-$$('[data-toast]').forEach(b=>b.addEventListener('click',()=>toast(lang==='bn'?b.dataset.toast:(b.dataset.toastEn||b.dataset.toast))));
-function setLang(){lang=lang==='bn'?'en':'bn';document.documentElement.lang=lang;$$('[data-bn][data-en]').forEach(el=>el.textContent=el.dataset[lang]);$('#langBtn').textContent=lang==='bn'?'EN':'বাংলা';const active=$('.nav button.active')?.dataset.page||'dashboard';showPage(active)}
-$('#langBtn').addEventListener('click',setLang);$('#langBtn2').addEventListener('click',setLang);
-function toggleTheme(){const d=document.documentElement;d.dataset.theme=d.dataset.theme==='dark'?'light':'dark';$('#themeBtn').textContent=d.dataset.theme==='dark'?'☀':'☾'}
-$('#themeBtn').addEventListener('click',toggleTheme);$('#themeBtn2').addEventListener('click',toggleTheme);
-$('#hamb').addEventListener('click',()=>{$('#sidebar').classList.add('open');$('#overlay').classList.add('show')});$('#overlay').addEventListener('click',()=>{$('#sidebar').classList.remove('open');$('#overlay').classList.remove('show')});
-const date=new Date();$('#today').textContent='📅 '+date.toLocaleDateString('bn-BD',{year:'numeric',month:'long',day:'numeric'});
-</script>
-
-<!-- Supabase Admin Login -->
-<div id="admin-login" style="display:flex;position:fixed;inset:0;z-index:99999;background:#101827;color:white;align-items:center;justify-content:center;padding:20px">
-  <div style="background:#1b2940;padding:28px;border-radius:16px;width:100%;max-width:380px">
-    <h2>DEAL MASTER BD</h2>
-    <p>Admin Login</p>
-    <input id="admin-email" type="email" placeholder="Admin Email" style="width:100%;padding:12px;margin:8px 0">
-    <input id="admin-password" type="password" placeholder="Password" style="width:100%;padding:12px;margin:8px 0">
-    <button id="admin-login-btn" style="width:100%;padding:12px;margin-top:12px">Login</button>
-    <p id="login-message"></p>
-  </div>
-</div>
-
+<section class="section-page" id="page-products">
+ <div class="welcome"><div class="eyebrow">PRODUCT CENTER</div><h1>পণ্য ও অফার ব্যবস্থাপনা</h1><p>Daraz-এর পণ্য সংরক্ষণ ও পরিচালনা করুন।</p></div>
+ <div class="card">
+  <div class="card-head"><h3>নতুন পণ্য যোগ করুন</h3><span class="pill">Supabase Connected</span></div>
+  <form id="productForm">
+   <div class="form-grid">
+    <div class="field"><label for="product-name">পণ্যের নাম *</label><input id="product-name" required maxlength="250" placeholder="যেমন: Redmi Note phone"></div>
+    <div class="field"><label for="product-url">Daraz Product URL *</label><input id="product-url" type="url" required placeholder="https://www.daraz.com.bd/..."></div>
+    <div class="field"><label for="sale-price">বর্তমান দাম (৳) *</label><input id="sale-price" type="number" min="0" step="0.01" required placeholder="0"></div>
+    <div class="field"><label for="original-price">আগের দাম (৳)</label><input id="original-price" type="number" min="0" step="0.01" placeholder="0"></div>
+    <div class="field"><label for="affiliate-url">Affiliate URL (ঐচ্ছিক)</label><input id="affiliate-url" type="url" placeholder="আপনার converted affiliate link"></div>
+    <div class="field"><label for="image-url">পণ্যের ছবির URL (ঐচ্ছিক)</label><input id="image-url" type="url" placeholder="https://..."></div>
+   </div>
+   <div class="helper">* চিহ্ন দেওয়া তথ্য অবশ্যই পূরণ করুন। Affiliate URL না থাকলে পরে যোগ করতে পারবেন।</div>
+   <div class="action-row"><button class="btn primary" id="saveProductBtn" type="submit">পণ্য সংরক্ষণ</button><button class="btn" type="reset">ফর্ম পরিষ্কার</button></div>
+  </form>
+ </div>
+ <div class="card">
+  <div class="card-head"><h3>সংরক্ষিত পণ্যের তালিকা</h3><button class="btn" id="refreshProducts">Refresh</button></div>
+  <div class="table-wrap"><table><thead><tr><th>পণ্যের নাম</th><th>বর্তমান দাম</th><th>আগের দাম</th><th>ছাড়</th><th>স্ট্যাটাস</th><th>তারিখ</th></tr></thead><tbody id="productsBody"><tr><td colspan="6" class="empty">লোড হচ্ছে...</td></tr></tbody></table></div>
+ </div>
+</section>
+<section class="section-page" id="page-links"><div class="welcome"><div class="eyebrow">AFFILIATE TOOLS</div><h1>অ্যাফিলিয়েট লিংক</h1><p>Daraz Affiliate Link Converter থেকে তৈরি লিংক সংরক্ষণ করুন।</p></div><div class="card"><p>পণ্য যোগ করার সময় Affiliate URL ঘরে converted link যোগ করুন।</p><button class="btn primary" data-go="products">পণ্য যোগ করতে যান</button></div></section>
+<section class="section-page" id="page-posting"><div class="welcome"><div class="eyebrow">CHANNEL MANAGEMENT</div><h1>পোস্টিং নিয়ন্ত্রণ</h1><p>চ্যানেল সংযোগের অবস্থা।</p></div><div class="card"><p>Telegram: @deal_master_bd — Bot API সংযোগ এখনো করা হয়নি।</p><p>Facebook: Page API সংযোগ ও অনুমতি প্রয়োজন।</p><p>WhatsApp Channel: আপাতত ম্যানুয়ালি পোস্ট করতে হবে।</p></div></section>
+<section class="section-page" id="page-earnings"><div class="welcome"><div class="eyebrow">REVENUE CENTER</div><h1>আয় ও কমিশন</h1><p>Daraz Affiliate রিপোর্ট ইমপোর্ট না করা পর্যন্ত এখানে প্রকৃত আয় দেখাবে না।</p></div><div class="card">এখনো কোনো কমিশন রিপোর্ট সংযুক্ত নেই।</div></section>
+<section class="section-page" id="page-settings"><div class="welcome"><div class="eyebrow">PREFERENCES</div><h1>সেটিংস</h1></div><div class="card"><p>অ্যাডমিন অ্যাকাউন্ট: Supabase Authentication</p><p>ডেটাবেজ: Supabase products table</p><p>নিরাপত্তা: Row Level Security চালু থাকা আবশ্যক।</p></div></section>
+</div></main></div>
+<div class="toast" id="toast"></div>
+<div class="login" id="admin-login"><div class="login-card"><h2>DEAL MASTER BD</h2><p>Admin Login</p><form id="loginForm"><input id="admin-email" type="email" autocomplete="username" placeholder="Admin Email" required><input id="admin-password" type="password" autocomplete="current-password" placeholder="Password" required><button id="admin-login-btn" type="submit">Login</button></form><p id="login-message"></p></div></div>
 <script type="module">
-import { createClient } from
-'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 
+// এই Publishable Key frontend-এ ব্যবহার করা যায়। Secret/Service Role Key কখনো এখানে দেবেন না।
 const SUPABASE_URL = 'https://usbvlmtczabmfxaqlffv.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_TjH6qItG5ctLesDFx-xbCA_1_5x1oHs';
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-const loginBox = document.getElementById('admin-login');
-const message = document.getElementById('login-message');
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => document.querySelectorAll(s);
+const loginBox = $('#admin-login');
+const loginMessage = $('#login-message');
+const toastEl = $('#toast');
+let currentSession = null;
 
-loginBox.style.display = 'flex';
-
-supabase.auth.onAuthStateChange((event, session) => {
-  loginBox.style.display = session ? 'none' : 'flex';
+function toast(message) {
+ toastEl.textContent = message;
+ toastEl.classList.add('show');
+ setTimeout(() => toastEl.classList.remove('show'), 3000);
+}
+function showPage(page) {
+ $$('.section-page').forEach(section => section.classList.remove('active'));
+ $('#page-' + page)?.classList.add('active');
+ $$('#nav button').forEach(button => button.classList.toggle('active', button.dataset.page === page));
+ const names = {dashboard:'ড্যাশবোর্ড',products:'পণ্য ও অফার',links:'অ্যাফিলিয়েট লিংক',posting:'পোস্টিং নিয়ন্ত্রণ',earnings:'আয় ও কমিশন',settings:'সেটিংস'};
+ $('#pageTitle').textContent = names[page] || 'Dashboard';
+}
+$$('#nav button').forEach(button => button.addEventListener('click', () => showPage(button.dataset.page)));
+$$('[data-go]').forEach(button => button.addEventListener('click', () => showPage(button.dataset.go)));
+$('#themeBtn').addEventListener('click', () => {
+ const root = document.documentElement;
+ root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+});
+$('#logoutBtn').addEventListener('click', async () => {
+ const { error } = await supabase.auth.signOut();
+ if (error) toast('Logout error: ' + error.message);
 });
 
-document.getElementById('admin-login-btn').onclick = async () => {
-  const email = document.getElementById('admin-email').value.trim();
-  const password = document.getElementById('admin-password').value;
-
-  message.textContent = 'Logging in...';
-
-  const { error } = await supabase.auth.signInWithPassword({
-    email,
-    password
-  });
-
+async function loadProducts() {
+ const body = $('#productsBody');
+ body.innerHTML = '<tr><td colspan="6" class="empty">লোড হচ্ছে...</td></tr>';
+ const { data, error } = await supabase.from('products')
+  .select('id,created_at,product_name,product_url,affiliate_url,original_price,sale_price,discount_percent,status')
+  .order('created_at', { ascending: false });
  if (error) {
-  message.textContent = error.message;
+  body.innerHTML = `<tr><td colspan="6" class="empty">ডেটাবেজ থেকে পণ্য আনা যায়নি: ${escapeHtml(error.message)}</td></tr>`;
+  toast('Products load failed');
   return;
+ }
+ $('#dashProducts').textContent = data.length;
+ if (!data.length) {
+  body.innerHTML = '<tr><td colspan="6" class="empty">এখনো কোনো পণ্য সংরক্ষণ করা হয়নি।</td></tr>';
+  return;
+ }
+ body.innerHTML = data.map(item => `<tr>
+  <td><strong>${escapeHtml(item.product_name || '')}</strong><br><a href="${safeUrl(item.affiliate_url || item.product_url)}" target="_blank" rel="noopener">লিংক খুলুন</a></td>
+  <td>৳${money(item.sale_price)}</td><td>৳${money(item.original_price)}</td>
+  <td>${item.discount_percent == null ? '—' : Number(item.discount_percent).toFixed(0) + '%'}</td>
+  <td>${escapeHtml(item.status || 'pending')}</td>
+  <td>${item.created_at ? new Date(item.created_at).toLocaleDateString('bn-BD') : '—'}</td>
+ </tr>`).join('');
+}
+function money(value) { return value == null ? '0' : Number(value).toLocaleString('en-BD',{maximumFractionDigits:2}); }
+function escapeHtml(value) { return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function safeUrl(value) {
+ try { const u = new URL(value); return ['https:','http:'].includes(u.protocol) ? escapeHtml(u.href) : '#'; }
+ catch { return '#'; }
 }
 
-message.textContent = 'Login successful. Checking database...';
+$('#productForm').addEventListener('submit', async (event) => {
+ event.preventDefault();
+ const button = $('#saveProductBtn');
+ const name = $('#product-name').value.trim();
+ const productUrl = $('#product-url').value.trim();
+ const salePrice = Number($('#sale-price').value);
+ const originalRaw = $('#original-price').value.trim();
+ const originalPrice = originalRaw === '' ? null : Number(originalRaw);
+ const affiliateUrl = $('#affiliate-url').value.trim() || null;
+ const imageUrl = $('#image-url').value.trim() || null;
+ if (!name || !productUrl || !Number.isFinite(salePrice) || salePrice < 0 ||
+     (originalPrice !== null && (!Number.isFinite(originalPrice) || originalPrice < 0))) {
+  toast('সঠিক পণ্যের নাম, URL ও দাম দিন।'); return;
+ }
+ if (originalPrice !== null && originalPrice > 0 && salePrice > originalPrice) {
+  toast('বর্তমান দাম আগের দামের চেয়ে বেশি হতে পারে না।'); return;
+ }
+ let discount = null;
+ if (originalPrice !== null && originalPrice > 0) {
+  discount = Math.round(((originalPrice - salePrice) / originalPrice) * 100);
+ }
+ button.disabled = true;
+ button.textContent = 'সংরক্ষণ হচ্ছে...';
+ const payload = {
+  product_name: name,
+  product_url: productUrl,
+  affiliate_url: affiliateUrl,
+  image_url: imageUrl,
+  sale_price: salePrice,
+  original_price: originalPrice,
+  discount_percent: discount,
+  status: 'pending'
+ };
+ const { error } = await supabase.from('products').insert(payload);
+ button.disabled = false;
+ button.textContent = 'পণ্য সংরক্ষণ';
+ if (error) {
+  toast('সংরক্ষণ হয়নি: ' + error.message);
+  return;
+ }
+ $('#productForm').reset();
+ toast('পণ্য সফলভাবে ডেটাবেজে সংরক্ষণ হয়েছে।');
+ await loadProducts();
+});
+$('#refreshProducts').addEventListener('click', loadProducts);
 
-const { count, error: dbError } = await supabase
-  .from('products')
-  .select('id', { count: 'exact', head: true });
+$('#loginForm').addEventListener('submit', async (event) => {
+ event.preventDefault();
+ const email = $('#admin-email').value.trim();
+ const password = $('#admin-password').value;
+ const button = $('#admin-login-btn');
+ button.disabled = true;
+ button.textContent = 'Login হচ্ছে...';
+ loginMessage.textContent = 'অ্যাকাউন্ট যাচাই করা হচ্ছে...';
+ const { error } = await supabase.auth.signInWithPassword({ email, password });
+ button.disabled = false;
+ button.textContent = 'Login';
+ if (error) loginMessage.textContent = error.message;
+});
 
-alert(dbError
-  ? 'Database Error: ' + dbError.message
-  : 'Database Connected! Products: ' + count);
-};
+supabase.auth.onAuthStateChange((_event, session) => {
+ currentSession = session;
+ loginBox.classList.toggle('hidden', !!session);
+ if (session) {
+  loginMessage.textContent = '';
+  loadProducts();
+ }
+});
+const { data: { session } } = await supabase.auth.getSession();
+currentSession = session;
+loginBox.classList.toggle('hidden', !!session);
+if (session) await loadProducts();
 </script>
-
 </body>
 </html>
